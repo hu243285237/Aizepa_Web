@@ -1,9 +1,48 @@
+h1
+{
+    text-align: center;
+    margin: 25px;
+}
+
+.banner
+{
+    margin: 10px;
+}
+
 .col
 {
     text-align: center;
 }
 
-.row
+.context-product
 {
-    margin-top: 45px;
+    margin-top: 25px;
+}
+
+.nav-link
+{
+    color: black;
+}
+
+.carousel-inner
+{
+    height: 480px;
+}
+
+.footer
+{
+    background-color: rgb(31, 32, 36);
+    color: aliceblue;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.footer-btn
+{
+    color: aliceblue;
+}
+
+.footer-text
+{
+    margin: 5px;
 }
