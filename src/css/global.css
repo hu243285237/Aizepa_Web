@@ -112,3 +112,7 @@ h2
 {
     margin: 5px;
 }
+
+a:link{
+    text-decoration-line: none;
+}

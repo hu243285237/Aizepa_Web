@@ -3,26 +3,22 @@
     margin-bottom: 20px;
 }
 
-.product-list{
-    float: left;
-    border-right: 1.5px solid gainsboro;
-    width: 250px;
+.product-context{
+    margin-left: 500px;
+    width: 600px;
     height: 600px;
 }
 
 .product-img{
-    margin-left: 350px;
-    overflow: hidden;
+    /* overflow: hidden; */
     width: 800px;
     height: 600px;
 }
 
 .product-img-item{
     float: left;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 h6{
@@ -41,4 +37,14 @@ a{
 
 a:link{
     text-decoration-line: none;
+}
+
+p{
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h4{
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
