@@ -2,6 +2,9 @@
   <div class="header">
     <el-container>
       <el-header height="65px">
+        <a class="icon" href="#">
+          <img width="180px" height="65px" src="../../assets/Images/Logo/logo.jpg">
+        </a>
         <el-menu
           :default-active="activeIndex"
           class="el-menu"
@@ -45,8 +48,17 @@ export default {
 </script>
 
 <style scoped>
+.el-header {
+  margin-left: 220px;
+  margin-right: 220px;
+}
+
+.icon {
+  height: inherit;
+  float: left;
+}
+
 .el-menu {
-  width: 500px;
-  margin-left: 1200px;
+  float: right;
 }
 </style>
