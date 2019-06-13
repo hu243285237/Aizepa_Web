@@ -1,9 +1,9 @@
 <template>
   <div class="header">
     <el-container>
-      <el-header height="65px">
+      <el-header height="80px">
         <a class="icon" href="#">
-          <img width="180px" height="65px" src="../../assets/Images/Logo/logo.jpg">
+          <img width="150px" height="50px" src="../../assets/Images/Logo/logo.jpg">
         </a>
         <el-menu
           :default-active="activeIndex"
@@ -49,8 +49,8 @@ export default {
 
 <style scoped>
 .el-header {
-  margin-left: 220px;
-  margin-right: 220px;
+  margin-left: 240px;
+  margin-right: 240px;
 }
 
 .icon {
@@ -58,7 +58,16 @@ export default {
   float: left;
 }
 
+.icon > img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .el-menu {
+  height: 65px;
   float: right;
+  top: 50%;
+  transform: translateY(-50%);
 }
 </style>
