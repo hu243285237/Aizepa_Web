@@ -1,7 +1,8 @@
 <template>
   <el-header height="80px">
     <a class="icon" href="#">
-      <img width="150px" height="50px" src="../../assets/Images/Logo/logo.jpg">
+      <img width="80px" height="50px" src="../../assets/Images/Logo/logo2.png">
+      <span class="title">深圳市晟瑞实业有限公司</span>
     </a>
     <el-menu
       :default-active="activeIndex"
@@ -83,5 +84,19 @@ export default {
   float: right;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.title {
+  color:black;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+a {
+  text-decoration: none;
 }
 </style>

@@ -30,7 +30,9 @@ export default {
   text-align: left;
   background-color: rgb(31, 32, 36);
   color: aliceblue;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 260px;
 }
 
 .footer-item {
