@@ -1,18 +1,16 @@
 <template>
-  <div class="index">
-    <el-container>
-      <el-main>
-        <!-- 轮播图 -->
-        <el-carousel trigger="click" height="480px">
-          <el-carousel-item v-for="img in background_imgs" :key="img">
-            <img :src="img">
-          </el-carousel-item>
-        </el-carousel>
-        <!-- 产品介绍 -->
-        <Product/>
-      </el-main>
-    </el-container>
-  </div>
+  <el-container>
+    <el-main>
+      <!-- 轮播图 -->
+      <el-carousel trigger="click" height="480px">
+        <el-carousel-item v-for="img in background_imgs" :key="img">
+          <img :src="img">
+        </el-carousel-item>
+      </el-carousel>
+      <!-- 产品介绍 -->
+      <Product/>
+    </el-main>
+  </el-container>
 </template>
 
 <script>
@@ -41,6 +39,11 @@ export default {
 </script>
 
 <style scoped>
+img {
+  width: 100%;
+  height: 100%;
+}
+
 .el-main {
   margin-left: 250px;
   margin-right: 250px;
