@@ -45,8 +45,9 @@ img {
 }
 
 .el-main {
-  margin-left: 250px;
-  margin-right: 250px;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 0px;
+  overflow: hidden;
 }
 </style>

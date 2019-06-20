@@ -64,8 +64,8 @@ export default {
 
 <style scoped>
 .el-header {
-  margin-left: 240px;
-  margin-right: 240px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .icon {
@@ -91,9 +91,8 @@ export default {
   text-decoration: none;
   font-size: 24px;
   font-weight: 600;
-  letter-spacing: 1px;
-  margin-left: 15px;
-  margin-right: 15px;
+  letter-spacing: 0px;
+  margin-left: 10px;
 }
 
 a {

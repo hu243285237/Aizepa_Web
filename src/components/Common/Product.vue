@@ -20,7 +20,7 @@
     <div class="products-content">
       <div class="product" v-for="product in currentList" :key="product.name">
         <img style="width: 300px; height: 200px" :src="product.img">
-        <span>{{ product.name }}</span>
+        <p class="product-name">{{ product.name }}</p>
       </div>
     </div>
   </el-container>
@@ -167,7 +167,7 @@ export default {
 }
 
 .el-menu {
-  width: 400px;
+  width: 25%;
 }
 
 .menu-title {
@@ -186,9 +186,13 @@ export default {
 }
 
 .product {
-  width: 300px;
+  width: 33%;
   height: 250px;
-  margin-left: 63px;
   float: left;
+}
+
+.product-name {
+  margin: 0px;
+  padding: 0px;
 }
 </style>
