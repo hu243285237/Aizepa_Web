@@ -152,6 +152,9 @@ export default {
       }
       this.currentList = arr
     }
+  },
+  mounted () {
+    this.selectType('type01')
   }
 }
 </script>
