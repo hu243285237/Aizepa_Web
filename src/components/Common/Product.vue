@@ -10,12 +10,11 @@
       active-text-color="#ffd04b"
     >
       <p class="menu-title">主要方案</p>
-      <el-menu-item index="1" @click="selectType('type01')">大屏汽车影音</el-menu-item>
-      <el-menu-item index="2" @click="selectType('type02')">单锭/双锭汽车影音</el-menu-item>
-      <el-menu-item index="3" @click="selectType('type03')">小屏汽车影音</el-menu-item>
-      <el-menu-item index="4" @click="selectType('type04')">汽车数字仪表</el-menu-item>
-      <el-menu-item index="5" @click="selectType('type05')">汽车定位系统</el-menu-item>
-      <el-menu-item index="6" @click="selectType('type06')">汽车辅助设备</el-menu-item>
+      <el-menu-item index="1" @click="selectType('type01')">车载产品</el-menu-item>
+      <el-menu-item index="2" @click="selectType('type02')">工业路由/DTU</el-menu-item>
+      <el-menu-item index="3" @click="selectType('type03')">网关&CPE</el-menu-item>
+      <el-menu-item index="4" @click="selectType('type04')">定位器</el-menu-item>
+      <el-menu-item index="5" @click="selectType('type05')">消费类</el-menu-item>
     </el-menu>
     <div class="products-content">
       <div class="product" v-for="product in currentList" :key="product.name">
@@ -69,16 +68,6 @@ export default {
           name: 'HDRM2030',
           type: 'type01',
           img: luyou22
-        },
-        {
-          name: 'HDR00 L1',
-          type: 'type01',
-          img: luyou22
-        },
-        {
-          name: 'HDRM1100 L2',
-          type: 'type01',
-          img: luyou33
         },
         {
           name: 'HDR1046i',
@@ -163,7 +152,7 @@ export default {
 .el-container {
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 750px;
+  height: 500px;
 }
 
 .el-menu {
@@ -173,10 +162,14 @@ export default {
 .menu-title {
   color: white;
   font-size: 26px;
-  margin: 0px;
+  margin: 0px 0px 10px 0px;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #363636;
+}
+
+.el-menu-item {
+  font-size: 16px;
 }
 
 .products-content {
