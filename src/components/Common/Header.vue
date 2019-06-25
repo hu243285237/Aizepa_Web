@@ -12,7 +12,7 @@
       text-color="#000000"
       active-text-color="#000000"
     >
-      <el-menu-item index="1">首页</el-menu-item>
+      <el-menu-item index="1"><router-link to="/">首页</router-link></el-menu-item>
       <el-submenu index="2">
         <template slot="title">关于我们</template>
         <el-menu-item index="2-1">公司简介</el-menu-item>
@@ -29,7 +29,7 @@
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">解决方案</template>
-        <el-menu-item index="4-1">车载 T-BOX方案</el-menu-item>
+        <el-menu-item index="4-1"><router-link to="/Solution">车载 T-BOX方案</router-link></el-menu-item>
         <el-menu-item index="4-2">智慧交通解决方案</el-menu-item>
         <el-menu-item index="4-3">能源监测解决方案</el-menu-item>
         <el-menu-item index="4-4">化工管道监控解决方案</el-menu-item>
@@ -100,6 +100,7 @@ export default {
 }
 
 a {
+  color: black;
   text-decoration: none;
 }
 </style>

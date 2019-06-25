@@ -8,30 +8,37 @@
         </el-carousel-item>
       </el-carousel>
       <!-- 解决方案 -->
-      <el-menu
-      default-active="1"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
-      background-color="#545c64"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-    >
-      <p class="menu-title">解决方案</p>
-      <el-menu-item index="1" @click="selectType('type01')">车载 T-BOX方案</el-menu-item>
-      <el-menu-item index="2" @click="selectType('type02')">智慧交通解决方案</el-menu-item>
-      <el-menu-item index="3" @click="selectType('type03')">能源监测解决方案</el-menu-item>
-      <el-menu-item index="4" @click="selectType('type04')">化工管道监控解决方案</el-menu-item>
-      <el-menu-item index="5" @click="selectType('type05')">电梯物联网解决方案</el-menu-item>
-    </el-menu>
-    <div class="products-content">
-      
-    </div>
+      <div class="content">
+        <el-menu
+        default-active="1"
+        class="el-menu-vertical-demo"
+        @open="handleOpen"
+        @close="handleClose"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b"
+        >
+          <p class="menu-title">解决方案</p>
+          <el-menu-item index="1" @click="selectSolution('车载 T-BOX方案')">车载 T-BOX方案</el-menu-item>
+          <el-menu-item index="2" @click="selectSolution('智慧交通解决方案')">智慧交通解决方案</el-menu-item>
+          <el-menu-item index="3" @click="selectSolution('能源监测解决方案')">能源监测解决方案</el-menu-item>
+          <el-menu-item index="4" @click="selectSolution('化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
+          <el-menu-item index="5" @click="selectSolution('电梯物联网解决方案')">电梯物联网解决方案</el-menu-item>
+        </el-menu>
+        <div class="solution">
+          <p class="solution-title">{{ currentSolution.name }}</p>
+          <p class="solution-content">{{ currentSolution.content }}</p>
+          <img style="width: 700px; height: 200px" :src="currentSolution.img">
+        </div>
+      </div>
     </el-main>
   </el-container>
 </template>
 
 <script>
+import background01 from '../../assets/Images/Carousel/background01.jpg'
+import background02 from '../../assets/Images/Carousel/background02.jpg'
+import background03 from '../../assets/Images/Carousel/background03.jpg'
 import luyou11 from '../../assets/Images/Product/Type01/luyou01.jpg'
 import luyou22 from '../../assets/Images/Product/Type01/luyou02.jpg'
 import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
@@ -39,36 +46,41 @@ import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
 export default {
   data () {
     return {
-      // 产品列表
+      background_imgs: [
+        background01,
+        background02,
+        background03
+      ],
+      // 解决方案列表
       solutions: [
         {
-          name: 'solution01',
-          content: '内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
+          name: '车载 T-BOX方案',
+          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou11
         },
         {
-          name: 'solution02',
-          content: '内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
+          name: '智慧交通解决方案',
+          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou22
         },
         {
-          name: 'solution03',
-          content: '内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
+          name: '能源监测解决方案',
+          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou33
         },
         {
-          name: 'solution04',
-          content: '内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
+          name: '化工管道监控解决方案',
+          content: '　　内容文字内容文字内容容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou22
         },
         {
-          name: 'solution05',
-          content: '内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
+          name: '电梯物联网解决方案',
+          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou11
         }
       ],
       // 当前选择的产品列表
-      currentList: {}
+      currentSolution: {}
     }
   },
   methods: {
@@ -78,32 +90,46 @@ export default {
     handleClose (key, keyPath) {
       console.log(key, keyPath)
     },
-    // 给予产品类别，返回此类别的产品数组
-    selectType (type) {
-      var arr = []
-      for (let i = 0; i < this.products.length; i++) {
-        if (this.products[i].type === type) {
-          arr.push(this.products[i])
+    // 给予解决方案名称，
+    selectSolution (name) {
+      for (let i = 0; i < this.solutions.length; i++) {
+        if (this.solutions[i].name === name) {
+          this.currentSolution = this.solutions[i]
         }
       }
-      this.currentList = arr
     }
   },
   mounted () {
-    this.selectType('type01')
+    this.selectSolution('车载 T-BOX方案')
   }
 }
 </script>
 
 <style scoped>
-.el-container {
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.el-main {
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  height: 500px;
   margin-top: 20px;
   margin-bottom: 20px;
-  height: 500px;
 }
 
 .el-menu {
-  width: 25%;
+  width: 300px;
+  height: 100%;
+  float: left;
 }
 
 .menu-title {
@@ -119,20 +145,18 @@ export default {
   font-size: 16px;
 }
 
-.products-content {
-  width: 100%;
+.solution {
   height: 100%;
-  margin: 0px;
+  margin-left: 320px;
+  margin-right: 20px;
 }
 
-.product {
-  width: 33%;
-  height: 250px;
-  float: left;
+.solution-title {
+  font-size: 26px;
+  font-weight: 600;
 }
 
-.product-name {
-  margin: 0px;
-  padding: 0px;
+.solution-content {
+  text-align: left;
 }
 </style>
