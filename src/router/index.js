@@ -1,16 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-// import HelloWorld from '@/components/Page/HelloWorld'
 import Index from '@/components/Page/Index'
+import Solution from '@/components/Page/Solution'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/Index',
       name: 'Index',
       component: Index
+    },
+    {
+      path: '/Solution',
+      name: 'Solution',
+      component: Solution
     }
   ]
 })
