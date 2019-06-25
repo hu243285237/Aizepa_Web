@@ -35,7 +35,7 @@
         <el-menu-item index="4-4">化工管道监控解决方案</el-menu-item>
         <el-menu-item index="4-5">电梯物联网解决方案</el-menu-item>
       </el-submenu>
-      <el-menu-item index="5">服务支持</el-menu-item>
+      <el-menu-item index="5">新闻资讯</el-menu-item>
       <el-submenu index="6">
         <template slot="title">联系我们</template>
         <el-menu-item index="6-1">联系方式</el-menu-item>
