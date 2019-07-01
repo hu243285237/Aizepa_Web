@@ -15,7 +15,7 @@
       <el-menu-item index="1"><router-link to="/">首页</router-link></el-menu-item>
       <el-submenu index="2">
         <template slot="title">关于我们</template>
-        <el-menu-item index="2-1">公司简介</el-menu-item>
+        <router-link to="/AboutUs"><el-menu-item index="2-1">公司简介</el-menu-item></router-link>
         <el-menu-item index="2-2">公司文化</el-menu-item>
         <el-menu-item index="2-3">公司使命</el-menu-item>
       </el-submenu>
@@ -29,7 +29,7 @@
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">解决方案</template>
-        <el-menu-item index="4-1"><router-link to="/Solution">车载 T-BOX方案</router-link></el-menu-item>
+        <router-link to="/Solution"><el-menu-item index="4-1">车载 T-BOX方案</el-menu-item></router-link>
         <el-menu-item index="4-2">智慧交通解决方案</el-menu-item>
         <el-menu-item index="4-3">能源监测解决方案</el-menu-item>
         <el-menu-item index="4-4">化工管道监控解决方案</el-menu-item>
@@ -37,12 +37,12 @@
       </el-submenu>
       <el-submenu index="5">
         <template slot="title">新闻资讯</template>
-        <el-menu-item index="5-1">公司动态</el-menu-item>
+        <router-link to="/News"><el-menu-item index="5-1">公司动态</el-menu-item></router-link>
         <el-menu-item index="5-2">行业新闻</el-menu-item>
       </el-submenu>
       <el-submenu index="6">
         <template slot="title">联系我们</template>
-        <el-menu-item index="6-1">联系方式</el-menu-item>
+        <router-link to="/ContactUs"><el-menu-item index="6-1">联系方式</el-menu-item></router-link>
         <el-menu-item index="6-2">人才招聘</el-menu-item>
         <el-menu-item index="6-3">网站留言</el-menu-item>
       </el-submenu>

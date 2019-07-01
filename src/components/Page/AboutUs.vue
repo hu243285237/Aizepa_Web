@@ -7,7 +7,7 @@
           <img :src="img">
         </el-carousel-item>
       </el-carousel>
-      <!-- 解决方案 -->
+      <!-- 关于我们 -->
       <div class="content">
         <el-menu
         default-active="1"
@@ -18,16 +18,14 @@
         text-color="#fff"
         active-text-color="#ffd04b"
         >
-          <p class="menu-title">解决方案</p>
-          <el-menu-item index="1" @click="selectSolution('车载 T-BOX方案')">车载 T-BOX方案</el-menu-item>
-          <el-menu-item index="2" @click="selectSolution('智慧交通解决方案')">智慧交通解决方案</el-menu-item>
-          <el-menu-item index="3" @click="selectSolution('能源监测解决方案')">能源监测解决方案</el-menu-item>
-          <el-menu-item index="4" @click="selectSolution('化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
-          <el-menu-item index="5" @click="selectSolution('电梯物联网解决方案')">电梯物联网解决方案</el-menu-item>
+          <p class="menu-title">关于我们</p>
+          <el-menu-item index="1" @click="select('公司简介')">公司简介</el-menu-item>
+          <el-menu-item index="2" @click="select('公司文化')">公司文化</el-menu-item>
+          <el-menu-item index="3" @click="select('公司使命')">公司使命</el-menu-item>
         </el-menu>
         <div class="solution">
-          <p class="solution-content">{{ currentSolution.content }}</p>
-          <img style="width: 700px; height: 200px" :src="currentSolution.img">
+          <p class="solution-content">{{ current.content }}</p>
+          <img style="width: 700px; height: 200px" :src="current.img">
         </div>
       </div>
     </el-main>
@@ -50,36 +48,26 @@ export default {
         background02,
         background03
       ],
-      // 解决方案列表
-      solutions: [
+      // 列表
+      array: [
         {
-          name: '车载 T-BOX方案',
+          name: '公司简介',
           content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou11
         },
         {
-          name: '智慧交通解决方案',
+          name: '公司文化',
           content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou22
         },
         {
-          name: '能源监测解决方案',
+          name: '公司使命',
           content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
           img: luyou33
-        },
-        {
-          name: '化工管道监控解决方案',
-          content: '　　内容文字内容文字内容容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
-          img: luyou22
-        },
-        {
-          name: '电梯物联网解决方案',
-          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内容文字内容文字',
-          img: luyou11
         }
       ],
-      // 当前选择的产品列表
-      currentSolution: {}
+      // 当前选择的列表
+      current: {}
     }
   },
   methods: {
@@ -89,17 +77,17 @@ export default {
     handleClose (key, keyPath) {
       console.log(key, keyPath)
     },
-    // 给予解决方案名称，
-    selectSolution (name) {
-      for (let i = 0; i < this.solutions.length; i++) {
-        if (this.solutions[i].name === name) {
-          this.currentSolution = this.solutions[i]
+    // 给予名称来选择
+    select (name) {
+      for (let i = 0; i < this.array.length; i++) {
+        if (this.array[i].name === name) {
+          this.current = this.array[i]
         }
       }
     }
   },
   mounted () {
-    this.selectSolution('车载 T-BOX方案')
+    this.select('公司简介')
   }
 }
 </script>
@@ -148,6 +136,11 @@ img {
   height: 100%;
   margin-left: 320px;
   margin-right: 20px;
+}
+
+.solution-title {
+  font-size: 26px;
+  font-weight: 600;
 }
 
 .solution-content {
