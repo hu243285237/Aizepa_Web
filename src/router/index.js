@@ -5,6 +5,7 @@ import Solution from '@/components/Page/Solution'
 import AboutUs from '@/components/Page/AboutUs'
 import News from '@/components/Page/News'
 import ContactUs from '@/components/Page/ContactUs'
+import Product from '@/components/Page/Product'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/ContactUs',
       name: 'ContactUs',
       component: ContactUs
+    },
+    {
+      path: '/Product',
+      name: 'Product',
+      component: Product
     }
   ]
 })

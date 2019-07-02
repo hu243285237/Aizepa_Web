@@ -21,7 +21,7 @@
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">产品中心</template>
-        <el-menu-item index="3-1">车载产品</el-menu-item>
+        <router-link to="/Product"><el-menu-item index="3-1">车载产品</el-menu-item></router-link>
         <el-menu-item index="3-2">工业路由/DTU</el-menu-item>
         <el-menu-item index="3-3">网关&CPE</el-menu-item>
         <el-menu-item index="3-4">定位器</el-menu-item>
