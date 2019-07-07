@@ -6,6 +6,7 @@ import AboutUs from '@/components/Page/AboutUs'
 import News from '@/components/Page/News'
 import ContactUs from '@/components/Page/ContactUs'
 import Product from '@/components/Page/Product'
+import ProductSub from '@/components/Page/ProductSub'
 
 Vue.use(Router)
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/Product',
       name: 'Product',
       component: Product
+    },
+    {
+      path: '/ProductSub',
+      name: 'ProductSub',
+      component: ProductSub
     }
   ]
 })

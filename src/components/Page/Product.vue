@@ -27,7 +27,7 @@
         </el-menu>
         <div class="products-content">
           <div class="product" v-for="product in currentList" :key="product.name">
-            <router-link to="/News">
+            <router-link to="/ProductSub">
               <img style="width: 300px; height: 200px" :src="product.img" />
               <p class="product-name">{{ product.name }}</p>
             </router-link>
