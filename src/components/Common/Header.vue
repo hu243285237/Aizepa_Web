@@ -3,6 +3,7 @@
     <a class="icon" href="#">
       <img width="80px" height="50px" src="../../assets/Images/Logo/logo2.png">
       <span class="title">深圳市晟瑞实业有限公司</span>
+      <span>咨询电话：+86-755-85207786</span>
     </a>
     <el-menu
       :default-active="activeIndex"
@@ -97,6 +98,7 @@ export default {
   font-weight: 600;
   letter-spacing: 0px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 
 a {

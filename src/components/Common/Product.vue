@@ -17,6 +17,7 @@
       <el-menu-item index="5" @click="selectType('type05')">消费类</el-menu-item>
     </el-menu>
     <div class="products-content">
+      <div class="recommend">推荐产品</div>
       <div class="product" v-for="product in currentList" :key="product.name">
         <router-link to="/ProductSub">
           <img style="width: 300px; height: 200px" :src="product.img">
@@ -189,5 +190,12 @@ export default {
 .product-name {
   margin: 0px;
   padding: 0px;
+}
+
+.recommend {
+  font-size: 24px;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 100px;
 }
 </style>
