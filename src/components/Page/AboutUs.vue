@@ -87,7 +87,9 @@ export default {
     }
   },
   mounted () {
-    this.select('公司简介')
+    let name = this.$route.params.name
+    alert(name)
+    this.select(name)
   }
 }
 </script>

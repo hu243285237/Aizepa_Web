@@ -8,14 +8,14 @@
     </div>
     <div class="text-right">
       <div class="row">
-        <span class="title"><router-link class="link" to="/">　首页　</router-link></span>
-        <span class="title"><router-link class="link" to="/AboutUs">关于我们</router-link></span>
-        <span class="title"><router-link class="link" to="/Product">产品中心</router-link></span>
+        <p class="title"><router-link class="link" to="/">网站首页</router-link></p>
+        <p class="title"><router-link class="link" to="/AboutUs">关于我们</router-link></p>
+        <p class="title"><router-link class="link" to="/Product">产品中心</router-link></p>
       </div>
       <div class="row">
-        <span class="title"><router-link class="link" to="/Solution">解决方案</router-link></span>
-        <span class="title"><router-link class="link" to="/News">新闻资讯</router-link></span>
-        <span class="title"><router-link class="link" to="/ContactUs">联系我们</router-link></span>
+        <p class="title"><router-link class="link" to="/Solution">解决方案</router-link></p>
+        <p class="title"><router-link class="link" to="/News">新闻资讯</router-link></p>
+        <p class="title"><router-link class="link" to="/ContactUs">联系我们</router-link></p>
       </div>
     </div>
     <!-- <div class="footer-item">邮件：jack.wang@aizepa.com</div> -->
@@ -62,6 +62,7 @@ export default {
 }
 
 .title {
+  display: inline;
   margin-left: 25px;
   margin-right: 25px;
   text-align: center;

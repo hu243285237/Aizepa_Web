@@ -13,12 +13,12 @@
       text-color="#000000"
       active-text-color="#000000"
     >
-      <el-menu-item index="1"><router-link to="/">首页</router-link></el-menu-item>
+      <el-menu-item index="1" @click="changePage('Index')">首页</el-menu-item>
       <el-submenu index="2">
         <template slot="title">关于我们</template>
-        <router-link to="/AboutUs"><el-menu-item index="2-1">公司简介</el-menu-item></router-link>
-        <el-menu-item index="2-2">公司文化</el-menu-item>
-        <el-menu-item index="2-3">公司使命</el-menu-item>
+        <el-menu-item index="2-1" @click="changePage('AboutUs', '公司简介')">公司简介</el-menu-item>
+        <el-menu-item index="2-2" @click="changePage('AboutUs', '公司文化')">公司文化</el-menu-item>
+        <el-menu-item index="2-3" @click="changePage('AboutUs', '公司使命')">公司使命</el-menu-item>
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">产品中心</template>
@@ -62,6 +62,10 @@ export default {
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
+    },
+    changePage (page, name) {
+      let params = { name }
+      this.$router.push({ name: page, params: params })
     }
   }
 }
