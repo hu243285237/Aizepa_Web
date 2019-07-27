@@ -10,7 +10,7 @@
       <!-- 解决方案 -->
       <div class="content">
         <el-menu
-        default-active="1"
+        :default-active="def"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -19,11 +19,11 @@
         active-text-color="#ffd04b"
         >
           <p class="menu-title">解决方案</p>
-          <el-menu-item index="1" @click="selectSolution('车载 T-BOX方案')">车载 T-BOX方案</el-menu-item>
-          <el-menu-item index="2" @click="selectSolution('智慧交通解决方案')">智慧交通解决方案</el-menu-item>
-          <el-menu-item index="3" @click="selectSolution('能源监测解决方案')">能源监测解决方案</el-menu-item>
-          <el-menu-item index="4" @click="selectSolution('化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
-          <el-menu-item index="5" @click="selectSolution('电梯物联网解决方案')">电梯物联网解决方案</el-menu-item>
+          <el-menu-item index="1" @click="select('车载 T-BOX方案')">车载 T-BOX方案</el-menu-item>
+          <el-menu-item index="2" @click="select('智慧交通解决方案')">智慧交通解决方案</el-menu-item>
+          <el-menu-item index="3" @click="select('能源监测解决方案')">能源监测解决方案</el-menu-item>
+          <el-menu-item index="4" @click="select('化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
+          <el-menu-item index="5" @click="select('电梯物联网解决方案')">电梯物联网解决方案</el-menu-item>
         </el-menu>
         <div class="solution">
           <p class="solution-content">{{ currentSolution.content }}</p>
@@ -45,6 +45,7 @@ import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
 export default {
   data () {
     return {
+      def: '1',
       background_imgs: [
         background01,
         background02,
@@ -90,7 +91,7 @@ export default {
       console.log(key, keyPath)
     },
     // 给予解决方案名称，
-    selectSolution (name) {
+    select (name) {
       for (let i = 0; i < this.solutions.length; i++) {
         if (this.solutions[i].name === name) {
           this.currentSolution = this.solutions[i]
@@ -99,7 +100,15 @@ export default {
     }
   },
   mounted () {
-    this.selectSolution('车载 T-BOX方案')
+    let name = this.$route.params.name
+    this.select(name)
+    switch (name) {
+      case '车载 T-BOX方案': this.def = '1'; break
+      case '智慧交通解决方案': this.def = '2'; break
+      case '能源监测解决方案': this.def = '3'; break
+      case '化工管道监控解决方案': this.def = '4'; break
+      case '电梯物联网解决方案': this.def = '5'; break
+    }
   }
 }
 </script>

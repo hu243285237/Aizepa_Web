@@ -2,7 +2,7 @@
   <div id="app">
     <!-- <img src="./assets/logo.png"> -->
     <Header/>
-    <router-view/>
+    <router-view :key="$route.path + $route.query.t"/>
     <Footer/>
   </div>
 </template>

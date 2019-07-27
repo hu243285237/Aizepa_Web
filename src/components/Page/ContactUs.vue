@@ -10,7 +10,7 @@
       <!-- 联系我们 -->
       <div class="content">
         <el-menu
-        default-active="1"
+        :default-active="def"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -44,6 +44,7 @@ import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
 export default {
   data () {
     return {
+      def: '1',
       background_imgs: [
         background01,
         background02,
@@ -135,7 +136,13 @@ export default {
     }
   },
   mounted () {
-    this.select('联系方式')
+    let name = this.$route.params.name
+    this.select(name)
+    switch (name) {
+      case '联系方式': this.def = '1'; break
+      case '人才招聘': this.def = '2'; break
+      case '网站留言': this.def = '3'; break
+    }
   }
 }
 </script>

@@ -10,7 +10,7 @@
       <!-- 产品中心 -->
       <div class="content">
         <el-menu
-          default-active="1"
+          :default-active="def"
           class="el-menu-vertical-demo"
           @open="handleOpen"
           @close="handleClose"
@@ -19,11 +19,11 @@
           active-text-color="#ffd04b"
         >
           <p class="menu-title">产品中心</p>
-          <el-menu-item index="1" @click="selectType('车载产品')">车载产品</el-menu-item>
-          <el-menu-item index="2" @click="selectType('工业路由/DTU')">工业路由/DTU</el-menu-item>
-          <el-menu-item index="3" @click="selectType('网关&CPE')">网关&CPE</el-menu-item>
-          <el-menu-item index="4" @click="selectType('定位器')">定位器</el-menu-item>
-          <el-menu-item index="5" @click="selectType('消费类')">消费类</el-menu-item>
+          <el-menu-item index="1" @click="select('车载产品')">车载产品</el-menu-item>
+          <el-menu-item index="2" @click="select('工业路由/DTU')">工业路由/DTU</el-menu-item>
+          <el-menu-item index="3" @click="select('网关&CPE')">网关&CPE</el-menu-item>
+          <el-menu-item index="4" @click="select('定位器')">定位器</el-menu-item>
+          <el-menu-item index="5" @click="select('消费类')">消费类</el-menu-item>
         </el-menu>
         <div class="products-content">
           <div class="product" v-for="product in currentList" :key="product.name">
@@ -53,6 +53,7 @@ import chezai02 from '../../assets/Images/Product/Type03/chezai02.jpg'
 export default {
   data () {
     return {
+      def: '1',
       background_imgs: [
         background01,
         background02,
@@ -153,7 +154,7 @@ export default {
       console.log(key, keyPath)
     },
     // 给予产品类别，返回此类别的产品数组
-    selectType (type) {
+    select (type) {
       var arr = []
       for (let i = 0; i < this.products.length; i++) {
         if (this.products[i].type === type) {
@@ -164,7 +165,15 @@ export default {
     }
   },
   mounted () {
-    this.selectType('车载产品')
+    let name = this.$route.params.name
+    this.select(name)
+    switch (name) {
+      case '车载产品': this.def = '1'; break
+      case '工业路由/DTU': this.def = '2'; break
+      case '网关&CPE': this.def = '3'; break
+      case '定位器': this.def = '4'; break
+      case '消费类': this.def = '5'; break
+    }
   }
 }
 </script>

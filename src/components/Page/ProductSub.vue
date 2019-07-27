@@ -122,11 +122,13 @@ a {
   font-weight: 600;
   float: left;
   margin-left: 100px;
+  margin-right: 100px;
 }
 
 .product-img {
   margin-top: 30px;
   margin-bottom: 30px;
+  margin-left: 100px;
   float: left;
 }
 

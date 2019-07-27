@@ -1,10 +1,12 @@
 <template>
   <el-header height="80px">
-    <a class="icon" href="#">
+    <div class="icon">
       <img width="80px" height="50px" src="../../assets/Images/Logo/logo2.png">
-      <span class="title">深圳市晟瑞实业有限公司</span>
+      <a @click="changePage('Index')" href="#">
+        <span class="title">深圳市晟瑞实业有限公司</span>
+      </a>
       <span>咨询电话：+86-755-85207786</span>
-    </a>
+    </div>
     <el-menu
       :default-active="activeIndex"
       class="el-menu"
@@ -22,30 +24,30 @@
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">产品中心</template>
-        <router-link to="/Product"><el-menu-item index="3-1">车载产品</el-menu-item></router-link>
-        <el-menu-item index="3-2">工业路由/DTU</el-menu-item>
-        <el-menu-item index="3-3">网关&CPE</el-menu-item>
-        <el-menu-item index="3-4">定位器</el-menu-item>
-        <el-menu-item index="3-5">消费类</el-menu-item>
+        <el-menu-item index="3-1" @click="changePage('Product', '车载产品')">车载产品</el-menu-item>
+        <el-menu-item index="3-2" @click="changePage('Product', '工业路由/DTU')">工业路由/DTU</el-menu-item>
+        <el-menu-item index="3-3" @click="changePage('Product', '网关&CPE')">网关&CPE</el-menu-item>
+        <el-menu-item index="3-4" @click="changePage('Product', '定位器')">定位器</el-menu-item>
+        <el-menu-item index="3-5" @click="changePage('Product', '消费类')">消费类</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">解决方案</template>
-        <router-link to="/Solution"><el-menu-item index="4-1">车载 T-BOX方案</el-menu-item></router-link>
-        <el-menu-item index="4-2">智慧交通解决方案</el-menu-item>
-        <el-menu-item index="4-3">能源监测解决方案</el-menu-item>
-        <el-menu-item index="4-4">化工管道监控解决方案</el-menu-item>
-        <el-menu-item index="4-5">电梯物联网解决方案</el-menu-item>
+        <el-menu-item index="4-1" @click="changePage('Solution', '车载 T-BOX方案')">车载 T-BOX方案</el-menu-item>
+        <el-menu-item index="4-2" @click="changePage('Solution', '智慧交通解决方案')">智慧交通解决方案</el-menu-item>
+        <el-menu-item index="4-3" @click="changePage('Solution', '能源监测解决方案')">能源监测解决方案</el-menu-item>
+        <el-menu-item index="4-4" @click="changePage('Solution', '化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
+        <el-menu-item index="4-5" @click="changePage('Solution', '电梯物联网解决方案')">电梯物联网解决方案</el-menu-item>
       </el-submenu>
       <el-submenu index="5">
         <template slot="title">新闻资讯</template>
-        <router-link to="/News"><el-menu-item index="5-1">公司动态</el-menu-item></router-link>
-        <el-menu-item index="5-2">行业新闻</el-menu-item>
+        <el-menu-item index="5-1" @click="changePage('News', '公司动态')">公司动态</el-menu-item>
+        <el-menu-item index="5-2" @click="changePage('News', '行业新闻')">行业新闻</el-menu-item>
       </el-submenu>
       <el-submenu index="6">
         <template slot="title">联系我们</template>
-        <router-link to="/ContactUs"><el-menu-item index="6-1">联系方式</el-menu-item></router-link>
-        <el-menu-item index="6-2">人才招聘</el-menu-item>
-        <el-menu-item index="6-3">网站留言</el-menu-item>
+        <el-menu-item index="6-1" @click="changePage('ContactUs', '联系方式')">联系方式</el-menu-item>
+        <el-menu-item index="6-2" @click="changePage('ContactUs', '人才招聘')">人才招聘</el-menu-item>
+        <el-menu-item index="6-3" @click="changePage('ContactUs', '网站留言')">网站留言</el-menu-item>
       </el-submenu>
     </el-menu>
   </el-header>
@@ -65,7 +67,7 @@ export default {
     },
     changePage (page, name) {
       let params = { name }
-      this.$router.push({ name: page, params: params })
+      this.$router.push({ name: page, params: params, query: { t: Date.now() } })
     }
   }
 }
