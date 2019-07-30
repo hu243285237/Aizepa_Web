@@ -28,7 +28,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   width: 100%;
-  min-width: 1600px;
+  min-width: 1750px;
 }
 
 body {
