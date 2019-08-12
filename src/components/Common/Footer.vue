@@ -8,14 +8,14 @@
     </div>
     <div class="text-right">
       <div class="row">
-        <p class="title"><router-link class="link" to="/">网站首页</router-link></p>
-        <p class="title"><router-link class="link" to="/AboutUs">关于我们</router-link></p>
-        <p class="title"><router-link class="link" to="/Product">产品中心</router-link></p>
+        <a class="title" href="#" @click="changePage('Index')">网站首页</a>
+        <a class="title" href="#" @click="changePage('AboutUs', '公司简介')">关于我们</a>
+        <a class="title" href="#" @click="changePage('Product', '车载产品')">产品中心</a>
       </div>
       <div class="row">
-        <p class="title"><router-link class="link" to="/Solution">解决方案</router-link></p>
-        <p class="title"><router-link class="link" to="/News">新闻资讯</router-link></p>
-        <p class="title"><router-link class="link" to="/ContactUs">联系我们</router-link></p>
+        <a class="title" href="#" @click="changePage('Solution', '车载 T-BOX方案')">解决方案</a>
+        <a class="title" href="#" @click="changePage('News', '公司动态')">新闻资讯</a>
+        <a class="title" href="#" @click="changePage('ContactUs', '联系方式')">联系我们</a>
       </div>
     </div>
     <!-- <div class="footer-item">邮件：jack.wang@aizepa.com</div> -->
@@ -28,6 +28,12 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    changePage (page, name) {
+      let params = { name }
+      this.$router.push({ name: page, params: params })
     }
   }
 }
@@ -75,6 +81,11 @@ export default {
 
 .link {
   color: aliceblue;
+  text-decoration: none;
+}
+
+a {
+  color: white;
   text-decoration: none;
 }
 </style>

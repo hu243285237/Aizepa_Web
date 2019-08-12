@@ -198,4 +198,9 @@ export default {
   text-align: left;
   margin-left: 100px;
 }
+
+a {
+  color: black;
+  text-decoration-line: none;
+}
 </style>

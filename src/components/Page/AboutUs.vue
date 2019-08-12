@@ -10,7 +10,7 @@
       <!-- 关于我们 -->
       <div class="content">
         <el-menu
-        default-active="1"
+        :default-active="def"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -43,6 +43,7 @@ import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
 export default {
   data () {
     return {
+      def: '1',
       background_imgs: [
         background01,
         background02,
@@ -90,8 +91,12 @@ export default {
   },
   mounted () {
     let name = this.$route.params.name
-    alert(name)
     this.select(name)
+    switch (name) {
+      case '公司简介': this.def = '1'; break
+      case '公司文化': this.def = '2'; break
+      case '公司使命': this.def = '3'; break
+    }
   }
 }
 </script>

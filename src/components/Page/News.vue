@@ -10,7 +10,7 @@
       <!-- 新闻资讯 -->
       <div class="content">
         <el-menu
-        default-active="1"
+        :default-active="def"
         class="el-menu-vertical-demo"
         @open="handleOpen"
         @close="handleClose"
@@ -44,6 +44,7 @@ import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
 export default {
   data () {
     return {
+      def: '1',
       background_imgs: [
         background01,
         background02,
@@ -115,7 +116,12 @@ export default {
     }
   },
   mounted () {
-    this.select('公司动态')
+    let name = this.$route.params.name
+    this.select(name)
+    switch (name) {
+      case '公司动态': this.def = '1'; break
+      case '行业新闻': this.def = '2'; break
+    }
   }
 }
 </script>
