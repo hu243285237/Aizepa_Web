@@ -27,7 +27,7 @@
         </el-menu>
         <div class="solution">
           <p class="solution-content">{{ currentSolution.content }}</p>
-          <img style="width: 700px; height: 200px" :src="currentSolution.img">
+          <img style="width: 800px; height: 350px" :src="currentSolution.img">
         </div>
       </div>
     </el-main>
@@ -38,9 +38,11 @@
 import background01 from '../../assets/Images/Carousel/background01.jpg'
 import background02 from '../../assets/Images/Carousel/background02.jpg'
 import background03 from '../../assets/Images/Carousel/background03.jpg'
-import luyou11 from '../../assets/Images/Product/Type01/luyou01.jpg'
-import luyou22 from '../../assets/Images/Product/Type01/luyou02.jpg'
-import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
+import solution01 from '../../assets/Images/Solution/Solution01.png'
+import solution02 from '../../assets/Images/Solution/Solution02.png'
+import solution03 from '../../assets/Images/Solution/Solution03.png'
+import solution04 from '../../assets/Images/Solution/Solution04.png'
+import solution05 from '../../assets/Images/Solution/Solution05.png'
 
 export default {
   data () {
@@ -55,28 +57,28 @@ export default {
       solutions: [
         {
           name: '车载 T-BOX方案',
-          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
-          img: luyou11
+          content: '　　4G车载盒子为车联网提供宽带接入，链路维护，热点共享，车辆数据上报等便捷可靠解决方案。同时，领佳物联云服务器可实现远程设备管理维护，24小时充值续费，开卡/关停，支持二维码，公众号，转账等充值接口。另外，我司还给客户定制APP，便于用户设备操作，维护，充值续费。该系统解决方案可为用户提供端、管、云一站式解决方案与服务。成功案例：国内某车厂。',
+          img: solution01
         },
         {
           name: '智慧交通解决方案',
-          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字,内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
-          img: luyou22
+          content: '　　4G路由器提供可靠宽带数据接入，永久在线。为公交，长途大巴提供远程监控，广告信息发布， WIFI热点共享，优化公交运营，支付，定位等提供丏业化解决方案及定制化服务。领佳物联云服务器可实现远程设备管理维护，24小时充值续费，开卡/关停，支持二维码，公众号，转账等充值接口。',
+          img: solution02
         },
         {
           name: '能源监测解决方案',
-          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
-          img: luyou33
+          content: '　　4G路由器提供可靠数据连接链路，永久在线。为光伏配电柜提供远程监控、数据传输、能源安全等提供工业化解决方案及定制化服务。成功案例：国内某厂光伏配电柜远程监控',
+          img: solution03
         },
         {
           name: '化工管道监控解决方案',
-          content: '　　内容文字内容文字内容容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字',
-          img: luyou22
+          content: '　　4G路由器/DTU及远程管理云服务器为梯联网提供无线提供端、管、云一站式解决方案与服务。客户应用管理平台可以通过我们的系统收集分店信息，实现远程设备管理和优化系统运营。为用户宽带接入，远程监控，设备定位，数据采集/传输，数据分析，经营优化等提供工业化解决方案及定制化服务。',
+          img: solution04
         },
         {
           name: '电梯物联网解决方案',
-          content: '　　内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内,容文字内容文字内容文字内容文字内容文字内容文字',
-          img: luyou11
+          content: '　　4G路由器/DTU及远程管理云服务器为梯联网提供无线提供端、管、云一站式解决方案与服务。客户应用管理平台可以通过我们的系统收集电梯信息，实现远程设备管理和优化系统运营。为电梯宽带接入，远程监控，设备定位，数据采集/传输，数据分析，运维优化等提供专业化解决方案及定制化服务。成功案例：国内某梯联网系统。',
+          img: solution05
         }
       ],
       // 当前选择的产品列表
