@@ -46,12 +46,12 @@ export default {
   color: aliceblue;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 260px;
+  padding-left: 220px;
 }
 
 .footer-item {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .text-left {
@@ -87,5 +87,11 @@ export default {
 a {
   color: white;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1600px) {
+  .text-right {
+    margin-right: 0px;
+  }
 }
 </style>

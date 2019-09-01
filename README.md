@@ -1,6 +1,6 @@
 # Aizepa_Web
 
-> www.aizepa.com
+> A website
 
 ## Build Setup
 

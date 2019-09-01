@@ -5,7 +5,7 @@
       <a @click="changePage('Index')" href="#">
         <span class="title">深圳市晟瑞实业有限公司</span>
       </a>
-      <span>咨询电话：+86-755-85207786</span>
+      <span class="tel">咨询电话：+86-755-85207786</span>
     </div>
     <el-menu
       :default-active="activeIndex"
@@ -75,8 +75,7 @@ export default {
 
 <style scoped>
 .el-header {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 8%;
 }
 
 .icon {
@@ -110,5 +109,11 @@ export default {
 a {
   color: black;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 1600px) {
+  .tel {
+    display: none;
+  }
 }
 </style>
