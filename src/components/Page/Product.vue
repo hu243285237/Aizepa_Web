@@ -230,7 +230,7 @@ a {
 }
 
 .product {
-  width: 25%;
+  width: 23%;
   height: 250px;
   float: left;
 }
