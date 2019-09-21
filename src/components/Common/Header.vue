@@ -54,6 +54,8 @@
 </template>
 
 <script>
+import eventBus from './EventBus'
+
 export default {
   name: 'Header',
   data () {
@@ -68,7 +70,16 @@ export default {
     changePage (page, name) {
       let params = { name }
       this.$router.push({ name: page, params: params, query: { t: Date.now() } })
+    },
+    acceptFooterInfo () {
+      eventBus.$on('changePage', (message) => {
+        this.changePage(message.page, message.name)
+        this.activeIndex = message.index
+      })
     }
+  },
+  created: function () {
+    this.acceptFooterInfo()
   }
 }
 </script>
