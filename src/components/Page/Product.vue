@@ -19,11 +19,12 @@
           active-text-color="#ffd04b"
         >
           <p class="menu-title">产品中心</p>
-          <el-menu-item index="1" @click="select('车载产品')">车载产品</el-menu-item>
-          <el-menu-item index="2" @click="select('工业路由/DTU')">工业路由/DTU</el-menu-item>
-          <el-menu-item index="3" @click="select('网关&CPE')">网关&CPE</el-menu-item>
-          <el-menu-item index="4" @click="select('定位器')">定位器</el-menu-item>
-          <el-menu-item index="5" @click="select('消费类')">消费类</el-menu-item>
+          <el-menu-item index="1" @click="select('苹果 OTG 转接线')">苹果 OTG 转接线</el-menu-item>
+          <el-menu-item index="2" @click="select('苹果 OTG 网卡')">苹果 OTG 网卡</el-menu-item>
+          <el-menu-item index="3" @click="select('苹果 OTG 读卡器')">苹果 OTG 读卡器</el-menu-item>
+          <el-menu-item index="4" @click="select('苹果音频转接头')">苹果音频转接头</el-menu-item>
+          <el-menu-item index="5" @click="select('TYPE-C 读卡器')">TYPE-C 读卡器</el-menu-item>
+          <el-menu-item index="6" @click="select('TYPE-C HUB')">TYPE-C HUB</el-menu-item>
         </el-menu>
         <div class="products-content">
           <div class="product" v-for="product in currentList" :key="product.name">
@@ -42,13 +43,38 @@
 import background01 from '../../assets/Images/Carousel/background01.jpg'
 import background02 from '../../assets/Images/Carousel/background02.jpg'
 import background03 from '../../assets/Images/Carousel/background03.jpg'
-import luyou11 from '../../assets/Images/Product/Type01/luyou01.jpg'
-import luyou22 from '../../assets/Images/Product/Type01/luyou02.jpg'
-import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
-import wangguan11 from '../../assets/Images/Product/Type02/wangguan01.jpg'
-import wangguan22 from '../../assets/Images/Product/Type02/wangguan02.jpg'
-import chezai01 from '../../assets/Images/Product/Type03/chezai01.jpg'
-import chezai02 from '../../assets/Images/Product/Type03/chezai02.jpg'
+
+import SR_010 from '../../assets/Images/Product/苹果 OTG 转接线/SR-010.png'
+import SR_010_A from '../../assets/Images/Product/苹果 OTG 转接线/SR-010-A.png'
+import SR_011 from '../../assets/Images/Product/苹果 OTG 转接线/SR-011.png'
+import SR_011_A from '../../assets/Images/Product/苹果 OTG 转接线/SR-011-A.png'
+
+import SR_030 from '../../assets/Images/Product/苹果 OTG 网卡/SR-030.png'
+import SR_030_A from '../../assets/Images/Product/苹果 OTG 网卡/SR-030-A.png'
+
+import SR_111 from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111.png'
+import SR_111_A from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111-A.png'
+import SR_021 from '../../assets/Images/Product/苹果 OTG 读卡器/SR-021.png'
+import SR_111_A from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111-A.png'
+import SR_111_C from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111-C.png'
+
+import SR_222 from '../../assets/Images/Product/TYPE-C 读卡器/SR-222.png'
+import SR_222_C from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-C.png'
+import SR_222_A from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-A.png'
+import SR_222_C from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-C.png'
+import SR_222_B from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-B.png'
+
+import SR_333 from '../../assets/Images/Product/TYPE-C HUB/SR-333.png'
+import SR_555 from '../../assets/Images/Product/TYPE-C HUB/SR-555.png'
+import SR_555_A from '../../assets/Images/Product/TYPE-C HUB/SR-555-A.png'
+import SR_333_A from '../../assets/Images/Product/TYPE-C HUB/SR-333-A.png'
+
+import SR_001 from '../../assets/Images/Product/苹果音频转接头/SR-001.png'
+import SR_001_1 from '../../assets/Images/Product/苹果音频转接头/SR-001-1.png'
+import SR_002 from '../../assets/Images/Product/苹果音频转接头/SR-002.png'
+import SR_003 from '../../assets/Images/Product/苹果音频转接头/SR-003.png'
+import SR_004 from '../../assets/Images/Product/苹果音频转接头/SR-004.png'
+import SR_005 from '../../assets/Images/Product/苹果音频转接头/SR-005.png'
 
 export default {
   data () {

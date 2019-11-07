@@ -19,6 +19,7 @@ import Product from '@/components/Common/Product'
 import background01 from '../../assets/Images/Carousel/background01.jpg'
 import background02 from '../../assets/Images/Carousel/background02.jpg'
 import background03 from '../../assets/Images/Carousel/background03.jpg'
+import background04 from '../../assets/Images/Carousel/background04.jpg'
 
 export default {
   name: 'HelloWorld',
@@ -31,7 +32,8 @@ export default {
       background_imgs: [
         background01,
         background02,
-        background03
+        background03,
+        background04
       ]
     }
   }
