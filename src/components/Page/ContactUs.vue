@@ -37,9 +37,8 @@
 import background01 from '../../assets/Images/Carousel/background01.jpg'
 import background02 from '../../assets/Images/Carousel/background02.jpg'
 import background03 from '../../assets/Images/Carousel/background03.jpg'
-import luyou11 from '../../assets/Images/Product/Type01/luyou01.jpg'
-import luyou22 from '../../assets/Images/Product/Type01/luyou02.jpg'
-import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
+
+import SR_010 from '../../assets/Images/Product/苹果 OTG 转接线/SR-010.png'
 
 export default {
   data () {
@@ -57,7 +56,7 @@ export default {
           content: [
             {
               name: 'title01',
-              img: luyou11,
+              img: SR_010,
               text: '深圳市晟瑞实业有限公司' +
               '\n地址：深圳市龙岗区坂雪岗大道3012号坂田商务大厦726室' +
               '\n电话：0755-85207786' +
@@ -71,7 +70,7 @@ export default {
           content: [
             {
               name: 'title01',
-              img: luyou33,
+              img: SR_010,
               text: '职位名称：硬件助理' +
               '\n招聘人数：1位' +
               '\n岗位要求：' +
@@ -90,7 +89,7 @@ export default {
             },
             {
               name: 'title02',
-              img: luyou33,
+              img: SR_010,
               text: '职位名称：PE工程师' +
               '\n招聘人数：1位' +
               '\n岗位要求：' +
@@ -109,7 +108,7 @@ export default {
             },
             {
               name: 'title03',
-              img: luyou33,
+              img: SR_010,
               text: '职位名称： 业务跟单' +
               '\n招聘人数：1人' +
               '\n岗位要求：' +
@@ -133,17 +132,17 @@ export default {
           content: [
             {
               name: 'title01',
-              img: luyou33,
+              img: SR_010,
               text: ''
             },
             {
               name: 'title02',
-              img: luyou11,
+              img: SR_010,
               text: ''
             },
             {
               name: 'title03',
-              img: luyou22,
+              img: SR_010,
               text: ''
             }
           ]

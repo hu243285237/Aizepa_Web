@@ -29,13 +29,7 @@
 </template>
 
 <script>
-import luyou11 from '../../assets/Images/Product/Type01/luyou01.jpg'
-import luyou22 from '../../assets/Images/Product/Type01/luyou02.jpg'
-import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
-import wangguan11 from '../../assets/Images/Product/Type02/wangguan01.jpg'
-import wangguan22 from '../../assets/Images/Product/Type02/wangguan02.jpg'
-import chezai01 from '../../assets/Images/Product/Type03/chezai01.jpg'
-import chezai02 from '../../assets/Images/Product/Type03/chezai02.jpg'
+import SR_010 from '../../assets/Images/Product/苹果 OTG 转接线/SR-010.png'
 
 export default {
   data () {
@@ -43,84 +37,9 @@ export default {
       // 产品列表
       products: [
         {
-          name: 'HDRM100 L1',
-          type: 'type01',
-          img: luyou11
-        },
-        {
-          name: 'HDRM100 L2',
-          type: 'type01',
-          img: luyou22
-        },
-        {
-          name: 'HDRM200',
-          type: 'type01',
-          img: luyou33
-        },
-        {
-          name: 'HDRM100 L11',
-          type: 'type01',
-          img: luyou33
-        },
-        {
-          name: 'HDRM100 L22',
-          type: 'type01',
-          img: luyou11
-        },
-        {
-          name: 'HDRM2030',
-          type: 'type01',
-          img: luyou22
-        },
-        {
-          name: 'HDR1046i',
-          type: 'type03',
-          img: chezai01
-        },
-        {
-          name: 'H00',
-          type: 'type03',
-          img: chezai02
-        },
-        {
-          name: 'DR146i',
-          type: 'type03',
-          img: chezai01
-        },
-        {
-          name: 'HD00',
-          type: 'type03',
-          img: chezai02
-        },
-        {
-          name: 'HR1046i',
-          type: 'type03',
-          img: chezai01
-        },
-        {
-          name: 'HD11300',
-          type: 'type03',
-          img: chezai02
-        },
-        {
-          name: 'HDR10146i',
-          type: 'type02',
-          img: wangguan22
-        },
-        {
-          name: 'H12300',
-          type: 'type02',
-          img: wangguan11
-        },
-        {
-          name: 'HDR146i',
-          type: 'type02',
-          img: wangguan22
-        },
-        {
-          name: 'D1020',
-          type: 'type02',
-          img: wangguan11
+          name: 'SR-010',
+          type: '苹果 OTG 转接线',
+          img: SR_010
         }
       ],
       // 当前选择的产品列表

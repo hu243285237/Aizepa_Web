@@ -38,7 +38,6 @@
 import background01 from '../../assets/Images/Carousel/background01.jpg'
 import background02 from '../../assets/Images/Carousel/background02.jpg'
 import background03 from '../../assets/Images/Carousel/background03.jpg'
-import luyou11 from '../../assets/Images/Product/Type01/luyou01.jpg'
 
 export default {
   data () {
@@ -52,7 +51,7 @@ export default {
       product: {
         name: 'HDRM100 L1',
         introduce: '',
-        img: luyou11
+        img: background01
       }
     }
   }

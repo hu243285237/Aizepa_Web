@@ -37,9 +37,6 @@
 import background01 from '../../assets/Images/Carousel/background01.jpg'
 import background02 from '../../assets/Images/Carousel/background02.jpg'
 import background03 from '../../assets/Images/Carousel/background03.jpg'
-import luyou11 from '../../assets/Images/Product/Type01/luyou01.jpg'
-import luyou22 from '../../assets/Images/Product/Type01/luyou02.jpg'
-import luyou33 from '../../assets/Images/Product/Type01/luyou03.jpg'
 
 export default {
   data () {
@@ -57,17 +54,17 @@ export default {
           content: [
             {
               name: 'title01',
-              img: luyou11,
+              img: background01,
               text: ''
             },
             {
               name: 'title02',
-              img: luyou22,
+              img: background01,
               text: ''
             },
             {
               name: 'title03',
-              img: luyou33,
+              img: background01,
               text: ''
             }
           ]
@@ -77,17 +74,17 @@ export default {
           content: [
             {
               name: 'title01',
-              img: luyou33,
+              img: background01,
               text: ''
             },
             {
               name: 'title02',
-              img: luyou11,
+              img: background01,
               text: ''
             },
             {
               name: 'title03',
-              img: luyou22,
+              img: background01,
               text: ''
             }
           ]
