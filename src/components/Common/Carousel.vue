@@ -33,7 +33,7 @@ img {
   height: 100%;
 }
 
-.el-main {
+.el-carousel {
   height: 100%;
   margin-left: 10%;
   margin-right: 10%;

@@ -1,8 +1,6 @@
 <template>
   <el-container>
     <el-main>
-      <!-- 轮播图 -->
-      <Carousel/>
       <!-- 产品介绍 -->
       <Product/>
     </el-main>
@@ -11,12 +9,10 @@
 
 <script>
 import Product from '@/components/Common/Product'
-import Carousel from '@/components/Common/Carousel'
 
 export default {
   components: {
-    Product,
-    Carousel
+    Product
   }
 }
 </script>

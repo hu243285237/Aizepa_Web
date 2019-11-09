@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header/>
+    <Carousel/>
     <router-view :key="$route.path + $route.query.t"/>
     <Footer/>
   </div>
@@ -8,12 +9,14 @@
 
 <script>
 import Header from '@/components/Common/Header'
+import Carousel from '@/components/Common/Carousel'
 import Footer from '@/components/Common/Footer'
 
 export default {
   name: 'App',
   components: {
     Header,
+    Carousel,
     Footer
   }
 }

@@ -24,11 +24,12 @@
       </el-submenu>
       <el-submenu index="3">
         <template slot="title">产品中心</template>
-        <el-menu-item index="3-1" @click="changePage('Product', '车载产品')">车载产品</el-menu-item>
-        <el-menu-item index="3-2" @click="changePage('Product', '工业路由/DTU')">工业路由/DTU</el-menu-item>
-        <el-menu-item index="3-3" @click="changePage('Product', '网关&CPE')">网关&CPE</el-menu-item>
-        <el-menu-item index="3-4" @click="changePage('Product', '定位器')">定位器</el-menu-item>
-        <el-menu-item index="3-5" @click="changePage('Product', '消费类')">消费类</el-menu-item>
+        <el-menu-item index="3-1" @click="changePage('Product', '苹果 OTG 转接线')">苹果 OTG 转接线</el-menu-item>
+        <el-menu-item index="3-2" @click="changePage('Product', '苹果 OTG 网卡')">苹果 OTG 网卡</el-menu-item>
+        <el-menu-item index="3-3" @click="changePage('Product', '苹果 OTG 读卡器')">苹果 OTG 读卡器</el-menu-item>
+        <el-menu-item index="3-4" @click="changePage('Product', 'TYPE-C 读卡器')">TYPE-C 读卡器</el-menu-item>
+        <el-menu-item index="3-5" @click="changePage('Product', 'TYPE-C HUB')">TYPE-C HUB</el-menu-item>
+        <el-menu-item index="3-5" @click="changePage('Product', '苹果音频转接头')">苹果音频转接头</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">新闻资讯</template>

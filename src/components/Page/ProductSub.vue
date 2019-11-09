@@ -35,23 +35,16 @@
 </template>
 
 <script>
-import background01 from '../../assets/Images/Carousel/background01.jpg'
-import background02 from '../../assets/Images/Carousel/background02.jpg'
-import background03 from '../../assets/Images/Carousel/background03.jpg'
+import SR_010 from '../../assets/Images/Product/苹果 OTG 转接线/SR-010.png'
 
 export default {
   data () {
     return {
-      background_imgs: [
-        background01,
-        background02,
-        background03
-      ],
       // 产品信息
       product: {
-        name: 'HDRM100 L1',
+        name: 'SR_010',
         introduce: '',
-        img: background01
+        img: SR_010
       }
     }
   }

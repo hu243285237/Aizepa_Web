@@ -1,12 +1,6 @@
 <template>
   <el-container>
     <el-main>
-      <!-- 轮播图 -->
-      <el-carousel trigger="click" height="480px">
-        <el-carousel-item v-for="img in background_imgs" :key="img">
-          <img :src="img" />
-        </el-carousel-item>
-      </el-carousel>
       <!-- 产品中心 -->
       <div class="content">
         <el-menu
@@ -40,10 +34,6 @@
 </template>
 
 <script>
-import background01 from '../../assets/Images/Carousel/background01.jpg'
-import background02 from '../../assets/Images/Carousel/background02.jpg'
-import background03 from '../../assets/Images/Carousel/background03.jpg'
-
 import SR_010 from '../../assets/Images/Product/苹果 OTG 转接线/SR-010.png'
 import SR_011 from '../../assets/Images/Product/苹果 OTG 转接线/SR-011.png'
 import SR_010_A from '../../assets/Images/Product/苹果 OTG 转接线/SR-010-A.png'
@@ -80,11 +70,6 @@ export default {
   data () {
     return {
       def: '1',
-      background_imgs: [
-        background01,
-        background02,
-        background03
-      ],
       // 产品列表
       products: [
         {
