@@ -1,14 +1,12 @@
 <template>
   <el-container>
-    <el-main>
-      <!-- 产品介绍 -->
-      <Product/>
-    </el-main>
+    <!-- 产品介绍 -->
+    <Product/>
   </el-container>
 </template>
 
 <script>
-import Product from '@/components/Common/Product'
+import Product from '@/components/Page/Product'
 
 export default {
   components: {
