@@ -10,12 +10,7 @@
           text-color="#fff"
           active-text-color="#ffd04b"
         >
-          <p class="menu-title">主要方案</p>
-          <el-menu-item index="1">车载 T-BOX方案</el-menu-item>
-          <el-menu-item index="2">智慧交通解决方案</el-menu-item>
-          <el-menu-item index="3">能源监测解决方案</el-menu-item>
-          <el-menu-item index="4">化工管道监控解决方案</el-menu-item>
-          <el-menu-item index="5">电梯物联网解决方案</el-menu-item>
+          <p class="menu-title">产品介绍</p>
         </el-menu>
         <div class="product">
           <p class="product-title">{{ product.name }}</p>

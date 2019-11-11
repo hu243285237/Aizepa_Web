@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Index from '@/components/Page/Index'
 import AboutUs from '@/components/Page/AboutUs'
 import News from '@/components/Page/News'
 import ContactUs from '@/components/Page/ContactUs'
@@ -13,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Index',
-      component: Index
+      name: 'Product',
+      component: Product
     },
     {
       path: '/AboutUs',
@@ -30,11 +29,6 @@ export default new Router({
       path: '/ContactUs',
       name: 'ContactUs',
       component: ContactUs
-    },
-    {
-      path: '/Product',
-      name: 'Product',
-      component: Product
     },
     {
       path: '/ProductSub',

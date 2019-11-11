@@ -2,7 +2,7 @@
   <el-header height="80px">
     <div class="icon">
       <img width="80px" height="50px" src="../../assets/Images/Logo/logo2.png">
-      <a @click="changePage('Index')" href="#">
+      <a @click="changePage('Product', '苹果 OTG 转接线')" href="#">
         <span class="title">深圳市晟瑞实业有限公司</span>
       </a>
       <span class="tel">咨询电话：+86-755-85207786</span>
@@ -15,7 +15,7 @@
       text-color="#000000"
       active-text-color="#000000"
     >
-      <el-menu-item index="1" @click="changePage('Index')">首页</el-menu-item>
+      <el-menu-item index="1" @click="changePage('Product', '苹果 OTG 转接线')">首页</el-menu-item>
       <el-submenu index="2">
         <template slot="title">关于我们</template>
         <el-menu-item index="2-1" @click="changePage('AboutUs', '公司简介')">公司简介</el-menu-item>
@@ -27,9 +27,9 @@
         <el-menu-item index="3-1" @click="changePage('Product', '苹果 OTG 转接线')">苹果 OTG 转接线</el-menu-item>
         <el-menu-item index="3-2" @click="changePage('Product', '苹果 OTG 网卡')">苹果 OTG 网卡</el-menu-item>
         <el-menu-item index="3-3" @click="changePage('Product', '苹果 OTG 读卡器')">苹果 OTG 读卡器</el-menu-item>
-        <el-menu-item index="3-4" @click="changePage('Product', 'TYPE-C 读卡器')">TYPE-C 读卡器</el-menu-item>
-        <el-menu-item index="3-5" @click="changePage('Product', 'TYPE-C HUB')">TYPE-C HUB</el-menu-item>
-        <el-menu-item index="3-5" @click="changePage('Product', '苹果音频转接头')">苹果音频转接头</el-menu-item>
+        <el-menu-item index="3-4" @click="changePage('Product', '苹果音频转接头')">苹果音频转接头</el-menu-item>
+        <el-menu-item index="3-5" @click="changePage('Product', 'TYPE-C 读卡器')">TYPE-C 读卡器</el-menu-item>
+        <el-menu-item index="3-6" @click="changePage('Product', 'TYPE-C HUB')">TYPE-C HUB</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
         <template slot="title">新闻资讯</template>

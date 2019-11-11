@@ -227,14 +227,15 @@ export default {
   },
   mounted () {
     let name = this.$route.params.name
+    name = (name === undefined ? '苹果 OTG 转接线' : name)
     this.select(name)
     switch (name) {
       case '苹果 OTG 转接线': this.def = '1'; break
       case '苹果 OTG 网卡': this.def = '2'; break
       case '苹果 OTG 读卡器': this.def = '3'; break
-      case 'TYPE-C 读卡器': this.def = '4'; break
-      case 'TYPE-C HUB': this.def = '5'; break
-      case '苹果音频转接头': this.def = '6'; break
+      case '苹果音频转接头': this.def = '4'; break
+      case 'TYPE-C 读卡器': this.def = '5'; break
+      case 'TYPE-C HUB': this.def = '6'; break
     }
   }
 }
