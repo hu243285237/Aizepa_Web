@@ -24,18 +24,14 @@
 </template>
 
 <script>
-import SR_010 from '../../assets/Images/Product/苹果 OTG 转接线/SR-010.png'
-
 export default {
   data () {
     return {
-      // 产品信息
-      product: {
-        name: 'SR_010',
-        introduce: '',
-        img: SR_010
-      }
+      product: {}
     }
+  },
+  mounted () {
+    this.product = this.$route.params
   }
 }
 </script>
@@ -116,5 +112,6 @@ a {
 .product-introduce {
   margin-left: 100px;
   float: left;
+  text-align: left;
 }
 </style>

@@ -22,10 +22,10 @@
         </el-menu>
         <div class="products-content">
           <div class="product" v-for="product in currentList" :key="product.name">
-            <router-link to="/ProductSub">
+            <a @click="toProductSub('ProductSub', product)">
               <img style="width: 300px; height: 200px" :src="product.img" />
               <p class="product-name">{{ product.name }}</p>
-            </router-link>
+            </a>
           </div>
         </div>
       </div>
@@ -34,175 +34,14 @@
 </template>
 
 <script>
-import SR_010 from '../../assets/Images/Product/苹果 OTG 转接线/SR-010.png'
-import SR_011 from '../../assets/Images/Product/苹果 OTG 转接线/SR-011.png'
-import SR_010_A from '../../assets/Images/Product/苹果 OTG 转接线/SR-010-A.png'
-import SR_011_A from '../../assets/Images/Product/苹果 OTG 转接线/SR-011-A.png'
-
-import SR_030 from '../../assets/Images/Product/苹果 OTG 网卡/SR-030.png'
-import SR_030_A from '../../assets/Images/Product/苹果 OTG 网卡/SR-030-A.png'
-
-import SR_111 from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111.png'
-import SR_021 from '../../assets/Images/Product/苹果 OTG 读卡器/SR-021.png'
-import SR_111_A from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111-A.png'
-import SR_111_B from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111-B.png'
-import SR_111_C from '../../assets/Images/Product/苹果 OTG 读卡器/SR-111-C.png'
-
-import SR_222 from '../../assets/Images/Product/TYPE-C 读卡器/SR-222.png'
-import SR_222_A from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-A.png'
-import SR_222_B from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-B.png'
-import SR_222_C from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-C.png'
-import SR_222_D from '../../assets/Images/Product/TYPE-C 读卡器/SR-222-D.png'
-
-import SR_333 from '../../assets/Images/Product/TYPE-C HUB/SR-333.png'
-import SR_555 from '../../assets/Images/Product/TYPE-C HUB/SR-555.png'
-import SR_555_A from '../../assets/Images/Product/TYPE-C HUB/SR-555-A.png'
-import SR_333_A from '../../assets/Images/Product/TYPE-C HUB/SR-333-A.png'
-
-import SR_001 from '../../assets/Images/Product/苹果音频转接头/SR-001.png'
-import SR_001_1 from '../../assets/Images/Product/苹果音频转接头/SR-001-1.png'
-import SR_002 from '../../assets/Images/Product/苹果音频转接头/SR-002.png'
-import SR_003 from '../../assets/Images/Product/苹果音频转接头/SR-003.png'
-import SR_004 from '../../assets/Images/Product/苹果音频转接头/SR-004.png'
-import SR_005 from '../../assets/Images/Product/苹果音频转接头/SR-005.png'
+import products from '../Common/Products.js'
 
 export default {
   data () {
     return {
       def: '1',
       // 产品列表
-      products: [
-        {
-          name: 'SR-010',
-          type: '苹果 OTG 转接线',
-          img: SR_010
-        },
-        {
-          name: 'SR-011',
-          type: '苹果 OTG 转接线',
-          img: SR_011
-        },
-        {
-          name: 'SR-010-A',
-          type: '苹果 OTG 转接线',
-          img: SR_010_A
-        },
-        {
-          name: 'SR-011-A',
-          type: '苹果 OTG 转接线',
-          img: SR_011_A
-        },
-        {
-          name: 'SR-030',
-          type: '苹果 OTG 网卡',
-          img: SR_030
-        },
-        {
-          name: 'SR-030-A',
-          type: '苹果 OTG 网卡',
-          img: SR_030_A
-        },
-        {
-          name: 'SR-111',
-          type: '苹果 OTG 读卡器',
-          img: SR_111
-        },
-        {
-          name: 'SR-021',
-          type: '苹果 OTG 读卡器',
-          img: SR_021
-        },
-        {
-          name: 'SR-111-A',
-          type: '苹果 OTG 读卡器',
-          img: SR_111_A
-        },
-        {
-          name: 'SR-111-B',
-          type: '苹果 OTG 读卡器',
-          img: SR_111_B
-        },
-        {
-          name: 'SR-111-C',
-          type: '苹果 OTG 读卡器',
-          img: SR_111_C
-        },
-        {
-          name: 'SR-222',
-          type: 'TYPE-C 读卡器',
-          img: SR_222
-        },
-        {
-          name: 'SR-222-A',
-          type: 'TYPE-C 读卡器',
-          img: SR_222_A
-        },
-        {
-          name: 'SR-222-B',
-          type: 'TYPE-C 读卡器',
-          img: SR_222_B
-        },
-        {
-          name: 'SR-222-C',
-          type: 'TYPE-C 读卡器',
-          img: SR_222_C
-        },
-        {
-          name: 'SR-222-D',
-          type: 'TYPE-C 读卡器',
-          img: SR_222_D
-        },
-        {
-          name: 'SR-333',
-          type: 'TYPE-C HUB',
-          img: SR_333
-        },
-        {
-          name: 'SR-555',
-          type: 'TYPE-C HUB',
-          img: SR_555
-        },
-        {
-          name: 'SR-333-A',
-          type: 'TYPE-C HUB',
-          img: SR_333_A
-        },
-        {
-          name: 'SR-555-A',
-          type: 'TYPE-C HUB',
-          img: SR_555_A
-        },
-        {
-          name: 'SR-001',
-          type: '苹果音频转接头',
-          img: SR_001
-        },
-        {
-          name: 'SR-001-1',
-          type: '苹果音频转接头',
-          img: SR_001_1
-        },
-        {
-          name: 'SR-002',
-          type: '苹果音频转接头',
-          img: SR_002
-        },
-        {
-          name: 'SR-003',
-          type: '苹果音频转接头',
-          img: SR_003
-        },
-        {
-          name: 'SR-004',
-          type: '苹果音频转接头',
-          img: SR_004
-        },
-        {
-          name: 'SR-005',
-          type: '苹果音频转接头',
-          img: SR_005
-        }
-      ],
+      products,
       // 当前选择的产品列表
       currentList: {}
     }
@@ -223,6 +62,9 @@ export default {
         }
       }
       this.currentList = arr
+    },
+    toProductSub (page, product) {
+      this.$router.push({ name: page, params: product })
     }
   },
   mounted () {
@@ -250,6 +92,7 @@ img {
 a {
   color: black;
   text-decoration-line: none;
+  cursor: pointer;
 }
 
 .el-main {
