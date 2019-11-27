@@ -6,8 +6,6 @@
         <el-menu
           :default-active="def"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
@@ -47,12 +45,6 @@ export default {
     }
   },
   methods: {
-    handleOpen (key, keyPath) {
-      console.log(key, keyPath)
-    },
-    handleClose (key, keyPath) {
-      console.log(key, keyPath)
-    },
     // 给予产品类别，返回此类别的产品数组
     select (type) {
       var arr = []
@@ -63,8 +55,9 @@ export default {
       }
       this.currentList = arr
     },
-    toProductSub (page, product) {
-      this.$router.push({ name: page, params: product })
+    // 跳转到具体产品介绍界面
+    toProductSub (name, product) {
+      this.$router.push({ name, params: product })
     }
   },
   mounted () {

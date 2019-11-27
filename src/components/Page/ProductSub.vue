@@ -1,16 +1,22 @@
 <template>
   <el-container>
     <el-main>
-      <!-- 产品介绍 -->
+      <!-- 产品中心 -->
       <div class="content">
         <el-menu
-          default-active="1"
+          :default-active="def"
           class="el-menu-vertical-demo"
           background-color="#545c64"
           text-color="#fff"
           active-text-color="#ffd04b"
         >
-          <p class="menu-title">产品介绍</p>
+          <p class="menu-title">产品中心</p>
+          <el-menu-item index="1" @click="toProduct('Product', '苹果 OTG 转接线')">苹果 OTG 转接线</el-menu-item>
+          <el-menu-item index="2" @click="toProduct('Product', '苹果 OTG 网卡')">苹果 OTG 网卡</el-menu-item>
+          <el-menu-item index="3" @click="toProduct('Product', '苹果 OTG 读卡器')">苹果 OTG 读卡器</el-menu-item>
+          <el-menu-item index="4" @click="toProduct('Product', '苹果音频转接头')">苹果音频转接头</el-menu-item>
+          <el-menu-item index="5" @click="toProduct('Product', 'TYPE-C 读卡器')">TYPE-C 读卡器</el-menu-item>
+          <el-menu-item index="6" @click="toProduct('Product', 'TYPE-C HUB')">TYPE-C HUB</el-menu-item>
         </el-menu>
         <div class="product">
           <p class="product-title">{{ product.name }}</p>
@@ -27,11 +33,29 @@
 export default {
   data () {
     return {
+      def: '1',
       product: {}
+    }
+  },
+  methods: {
+    // 跳转到产品中心页面
+    toProduct (page, name) {
+      let params = { name }
+      this.$router.push({ name: page, params: params })
     }
   },
   mounted () {
     this.product = this.$route.params
+    let type = this.product.type
+    type = (type === undefined ? '苹果 OTG 转接线' : type)
+    switch (type) {
+      case '苹果 OTG 转接线': this.def = '1'; break
+      case '苹果 OTG 网卡': this.def = '2'; break
+      case '苹果 OTG 读卡器': this.def = '3'; break
+      case '苹果音频转接头': this.def = '4'; break
+      case 'TYPE-C 读卡器': this.def = '5'; break
+      case 'TYPE-C HUB': this.def = '6'; break
+    }
   }
 }
 </script>
