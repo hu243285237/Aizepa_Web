@@ -21,7 +21,7 @@
         <div class="products-content">
           <div class="product" v-for="product in currentList" :key="product.name">
             <a @click="toProductSub('ProductSub', product)">
-              <img style="width: 300px; height: 200px" :src="product.img" />
+              <img style="width: 225px; height: 200px" :src="product.img" />
               <p class="product-name">{{ product.name }}</p>
             </a>
           </div>

@@ -209,8 +209,8 @@ img {
 
 .solution {
   height: 100%;
-  margin-left: 320px;
-  margin-right: 20px;
+  margin-left: 350px;
+  margin-right: 50px;
 }
 
 .solution-title {

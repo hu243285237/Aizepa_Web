@@ -20,7 +20,7 @@
         </el-menu>
         <div class="product">
           <p class="product-title">{{ product.name }}</p>
-          <img class="product-img" style="width: 400px; height: 200px" :src="product.img" />
+          <img class="product-img" style="width: 225px; height: 200px" :src="product.img" />
           <p class="product-title">产品介绍：</p>
           <p class="product-introduce">{{ product.introduce }}</p>
         </div>
@@ -130,7 +130,7 @@ a {
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: 100px;
-  float: left;
+  display: block;
 }
 
 .product-introduce {

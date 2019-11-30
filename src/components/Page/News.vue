@@ -18,8 +18,8 @@
         </el-menu>
         <div class="solution">
           <div v-for="item in currentSub" :key="item.name">
-            <img class="list-img" :src="item.img">
-            <p class="solution-content">{{ item.text }}</p>
+            <!-- <img class="list-img" :src="item.img">
+            <p class="solution-content">{{ item.text }}</p> -->
           </div>
         </div>
       </div>
