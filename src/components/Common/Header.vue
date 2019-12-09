@@ -5,7 +5,7 @@
       <a @click="changePage('Product', '苹果 OTG 转接线')" href="#">
         <span class="title">深圳市晟瑞实业有限公司</span>
       </a>
-      <span class="tel">咨询电话：+86-755-85207786</span>
+      <span>咨询电话：+86-755-85207786</span>
     </div>
     <el-menu
       :default-active="activeIndex"
@@ -113,11 +113,5 @@ export default {
 a {
   color: black;
   text-decoration: none;
-}
-
-@media only screen and (max-width: 1600px) {
-  .tel {
-    display: none;
-  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <!-- 轮播图 -->
-  <el-carousel trigger="click" height="480px">
+  <el-carousel trigger="click" height="450px">
     <el-carousel-item v-for="img in background_imgs" :key="img">
       <img :src="img">
     </el-carousel-item>
