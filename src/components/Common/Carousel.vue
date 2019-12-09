@@ -12,6 +12,7 @@ import background01 from '../../assets/Images/Carousel/background01.jpg'
 import background02 from '../../assets/Images/Carousel/background02.jpg'
 import background03 from '../../assets/Images/Carousel/background03.jpg'
 import background04 from '../../assets/Images/Carousel/background04.jpg'
+import background05 from '../../assets/Images/Carousel/background05.jpg'
 
 export default {
   data () {
@@ -20,7 +21,8 @@ export default {
         background01,
         background02,
         background03,
-        background04
+        background04,
+        background05
       ]
     }
   }
