@@ -11,10 +11,10 @@
           active-text-color="#ffd04b"
         >
           <p class="menu-title">产品中心</p>
-          <el-menu-item index="1" @click="toProduct('Product', '苹果 OTG 转接线')">苹果 OTG 转接线</el-menu-item>
-          <el-menu-item index="2" @click="toProduct('Product', '苹果 OTG 网卡')">苹果 OTG 网卡</el-menu-item>
-          <el-menu-item index="3" @click="toProduct('Product', '苹果 OTG 读卡器')">苹果 OTG 读卡器</el-menu-item>
-          <el-menu-item index="4" @click="toProduct('Product', '苹果音频转接头')">苹果音频转接头</el-menu-item>
+          <el-menu-item index="1" @click="toProduct('Product', '工业路由 DTU')">工业路由 DTU</el-menu-item>
+          <el-menu-item index="2" @click="toProduct('Product', '网关 CPE')">网关 CPE</el-menu-item>
+          <el-menu-item index="3" @click="toProduct('Product', '车载产品')">车载产品</el-menu-item>
+          <el-menu-item index="4" @click="toProduct('Product', '定位器')">定位器</el-menu-item>
           <el-menu-item index="5" @click="toProduct('Product', 'TYPE-C 读卡器')">TYPE-C 读卡器</el-menu-item>
           <el-menu-item index="6" @click="toProduct('Product', 'TYPE-C HUB')">TYPE-C HUB</el-menu-item>
         </el-menu>
@@ -47,12 +47,12 @@ export default {
   mounted () {
     this.product = this.$route.params
     let type = this.product.type
-    type = (type === undefined ? '苹果 OTG 转接线' : type)
+    type = (type === undefined ? '工业路由 DTU' : type)
     switch (type) {
-      case '苹果 OTG 转接线': this.def = '1'; break
-      case '苹果 OTG 网卡': this.def = '2'; break
-      case '苹果 OTG 读卡器': this.def = '3'; break
-      case '苹果音频转接头': this.def = '4'; break
+      case '工业路由 DTU': this.def = '1'; break
+      case '网关 CPE': this.def = '2'; break
+      case '车载产品': this.def = '3'; break
+      case '定位器': this.def = '4'; break
       case 'TYPE-C 读卡器': this.def = '5'; break
       case 'TYPE-C HUB': this.def = '6'; break
     }

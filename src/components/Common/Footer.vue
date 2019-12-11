@@ -8,9 +8,9 @@
     </div>
     <div class="text-right">
       <div class="row">
-        <a class="title" href="#" @click="emitToHeader('1', 'Product', '苹果 OTG 转接线')">网站首页</a>
+        <a class="title" href="#" @click="emitToHeader('1', 'Product', '工业路由 DTU')">网站首页</a>
         <a class="title" href="#" @click="emitToHeader('2', 'AboutUs', '公司简介')">关于我们</a>
-        <a class="title" href="#" @click="emitToHeader('3', 'Product', '苹果 OTG 转接线')">产品中心</a>
+        <a class="title" href="#" @click="emitToHeader('3', 'Product', '工业路由 DTU')">产品中心</a>
       </div>
       <div class="row">
         <a class="title" href="#" @click="emitToHeader('4', 'News', '公司动态')">新闻资讯</a>
