@@ -13,8 +13,9 @@
         <a class="title" href="#" @click="emitToHeader('3', 'Product', '工业路由 DTU')">产品中心</a>
       </div>
       <div class="row">
-        <a class="title" href="#" @click="emitToHeader('4', 'News', '公司动态')">新闻资讯</a>
-        <a class="title" href="#" @click="emitToHeader('5', 'ContactUs', '联系方式')">联系我们</a>
+        <a class="title" href="#" @click="emitToHeader('4', 'Solution', '车载 T-BOX 方案')">解决方案</a>
+        <a class="title" href="#" @click="emitToHeader('5', 'News', '公司动态')">新闻资讯</a>
+        <a class="title" href="#" @click="emitToHeader('6', 'ContactUs', '联系方式')">联系我们</a>
       </div>
     </div>
     <!-- <div class="footer-item">邮件：jack.wang@aizepa.com</div> -->

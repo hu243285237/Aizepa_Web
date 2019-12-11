@@ -1,11 +1,11 @@
 <template>
   <el-header height="80px">
     <div class="icon">
-      <img width="80px" height="50px" src="../../assets/Images/Logo/logo2.png">
+      <img width="60px" height="50px" src="../../assets/Images/Logo/logo2.png">
       <a @click="changePage('Product', '工业路由 DTU')" href="#">
         <span class="title">深圳市晟瑞实业有限公司</span>
       </a>
-      <span>咨询电话：+86-755-85207786</span>
+      <span>电话：+86-755-85207786</span>
     </div>
     <el-menu
       :default-active="activeIndex"
@@ -32,15 +32,23 @@
         <el-menu-item index="3-6" @click="changePage('Product', 'TYPE-C HUB')">TYPE-C HUB</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
-        <template slot="title">新闻资讯</template>
-        <el-menu-item index="4-1" @click="changePage('News', '公司动态')">公司动态</el-menu-item>
-        <el-menu-item index="4-2" @click="changePage('News', '行业新闻')">行业新闻</el-menu-item>
+        <template slot="title">解决方案</template>
+        <el-menu-item index="4-1" @click="changePage('Solution', '车载 T-BOX 方案')">车载 T-BOX 方案</el-menu-item>
+        <el-menu-item index="4-2" @click="changePage('Solution', '智慧交通解决方案')">智慧交通解决方案</el-menu-item>
+        <el-menu-item index="4-3" @click="changePage('Solution', '能源监测解决方案')">能源监测解决方案</el-menu-item>
+        <el-menu-item index="4-4" @click="changePage('Solution', '化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
+        <el-menu-item index="4-5" @click="changePage('Solution', '电梯物联网解决方案')">电梯物联网解决方案</el-menu-item>
       </el-submenu>
       <el-submenu index="5">
+        <template slot="title">新闻资讯</template>
+        <el-menu-item index="5-1" @click="changePage('News', '公司动态')">公司动态</el-menu-item>
+        <el-menu-item index="5-2" @click="changePage('News', '行业新闻')">行业新闻</el-menu-item>
+      </el-submenu>
+      <el-submenu index="6">
         <template slot="title">联系我们</template>
-        <el-menu-item index="5-1" @click="changePage('ContactUs', '联系方式')">联系方式</el-menu-item>
-        <el-menu-item index="5-2" @click="changePage('ContactUs', '人才招聘')">人才招聘</el-menu-item>
-        <el-menu-item index="5-3" @click="changePage('ContactUs', '网站留言')">网站留言</el-menu-item>
+        <el-menu-item index="6-1" @click="changePage('ContactUs', '联系方式')">联系方式</el-menu-item>
+        <el-menu-item index="6-2" @click="changePage('ContactUs', '人才招聘')">人才招聘</el-menu-item>
+        <el-menu-item index="6-3" @click="changePage('ContactUs', '网站留言')">网站留言</el-menu-item>
       </el-submenu>
     </el-menu>
   </el-header>

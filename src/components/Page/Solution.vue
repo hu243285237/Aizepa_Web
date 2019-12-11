@@ -1,12 +1,6 @@
 <template>
   <el-container>
     <el-main>
-      <!-- 轮播图 -->
-      <el-carousel trigger="click" height="480px">
-        <el-carousel-item v-for="img in background_imgs" :key="img">
-          <img :src="img">
-        </el-carousel-item>
-      </el-carousel>
       <!-- 解决方案 -->
       <div class="content">
         <el-menu
@@ -19,7 +13,7 @@
         active-text-color="#ffd04b"
         >
           <p class="menu-title">解决方案</p>
-          <el-menu-item index="1" @click="select('车载 T-BOX方案')">车载 T-BOX方案</el-menu-item>
+          <el-menu-item index="1" @click="select('车载 T-BOX 方案')">车载 T-BOX 方案</el-menu-item>
           <el-menu-item index="2" @click="select('智慧交通解决方案')">智慧交通解决方案</el-menu-item>
           <el-menu-item index="3" @click="select('能源监测解决方案')">能源监测解决方案</el-menu-item>
           <el-menu-item index="4" @click="select('化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
@@ -35,9 +29,6 @@
 </template>
 
 <script>
-import background01 from '../../assets/Images/Carousel/background01.jpg'
-import background02 from '../../assets/Images/Carousel/background02.jpg'
-import background03 from '../../assets/Images/Carousel/background03.jpg'
 import solution01 from '../../assets/Images/Solution/Solution01.png'
 import solution02 from '../../assets/Images/Solution/Solution02.png'
 import solution03 from '../../assets/Images/Solution/Solution03.png'
@@ -48,15 +39,10 @@ export default {
   data () {
     return {
       def: '1',
-      background_imgs: [
-        background01,
-        background02,
-        background03
-      ],
       // 解决方案列表
       solutions: [
         {
-          name: '车载 T-BOX方案',
+          name: '车载 T-BOX 方案',
           content: '　　4G车载盒子为车联网提供宽带接入，链路维护，热点共享，车辆数据上报等便捷可靠解决方案。同时，领佳物联云服务器可实现远程设备管理维护，24小时充值续费，开卡/关停，支持二维码，公众号，转账等充值接口。另外，我司还给客户定制APP，便于用户设备操作，维护，充值续费。该系统解决方案可为用户提供端、管、云一站式解决方案与服务。成功案例：国内某车厂。',
           img: solution01
         },
@@ -105,7 +91,7 @@ export default {
     let name = this.$route.params.name
     this.select(name)
     switch (name) {
-      case '车载 T-BOX方案': this.def = '1'; break
+      case '车载 T-BOX 方案': this.def = '1'; break
       case '智慧交通解决方案': this.def = '2'; break
       case '能源监测解决方案': this.def = '3'; break
       case '化工管道监控解决方案': this.def = '4'; break
