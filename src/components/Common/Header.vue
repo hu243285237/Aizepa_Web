@@ -5,7 +5,7 @@
       <a @click="changePage('Product', '工业路由 DTU')" href="#">
         <span class="title">深圳市晟瑞实业有限公司</span>
       </a>
-      <span>电话：+86-755-85207786</span>
+      <span>咨询电话：15302776753</span>
     </div>
     <el-menu
       :default-active="activeIndex"
@@ -39,11 +39,13 @@
         <el-menu-item index="4-4" @click="changePage('Solution', '化工管道监控解决方案')">化工管道监控解决方案</el-menu-item>
         <el-menu-item index="4-5" @click="changePage('Solution', '电梯物联网解决方案')">电梯物联网解决方案</el-menu-item>
       </el-submenu>
+      <!--
       <el-submenu index="5">
         <template slot="title">新闻资讯</template>
         <el-menu-item index="5-1" @click="changePage('News', '公司动态')">公司动态</el-menu-item>
         <el-menu-item index="5-2" @click="changePage('News', '行业新闻')">行业新闻</el-menu-item>
       </el-submenu>
+      -->
       <el-submenu index="6">
         <template slot="title">联系我们</template>
         <el-menu-item index="6-1" @click="changePage('ContactUs', '联系方式')">联系方式</el-menu-item>

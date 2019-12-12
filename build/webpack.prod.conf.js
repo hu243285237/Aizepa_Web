@@ -122,7 +122,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // 使用 prerenderSpaPlugin 进行 SEO 优化
     new PrerenderSpaPlugin({
       staticDir: path.join(__dirname, '../dist'),
-      routes: ['/Product', '/AboutUs', '/News', '/ContactUs', '/ProductSub'],
+      routes: ['/Product', '/Solution', '/AboutUs', '/News', '/ContactUs', '/ProductSub'],
       renderer: new Renderer({
         inject: {
           foo: 'bar'
